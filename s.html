@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iniciar sesión</title>
+<style>
+    h1 {
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+label, input[type="submit"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+#contenedor{
+    border-radius: 50px;
+background:linear-gradient(100deg,rgb(111, 43, 111),rgb(100, 16, 100)) ;
+    width: 50%;
+    box-shadow: 10px;
+}
+body{
+    background: rgb(130, 26, 130);
+}
+</style>
+</head>
+  <body>
+    <h1>Smart Man</h1>
+
+   <center><div id="contenedor">
+    <form action="index.html" method="post">
+      <label for="username" style="font-size: 30px;">Nombre de usuario:</label>
+      <input type="text" id="username" name="username" required style="border-radius: 50px;">
+
+      <label for="password" style="font-size: 30px;">Contraseña:</label>
+      <input type="password" id="password" name="password" required  style="border-radius: 50px;">
+      <br><br>
+      <label for="">Bienvenido</label>
+   </div></center>
+<br><br>
+<center>      <input type="submit" value="Iniciar sesión">
+</center>
+</form>
+    <script>
+        const loginForm = document.getElementById('login-form');
+const errorMessage = document.getElementById('error-message');
+
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault(); 
+
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
+
+  if (username === 'elias' && password === 'juniorh') {
+    window.location.href = 'proyecto'; 
+  } else {
+    errorMessage.textContent = 'Nombre de usuario o contraseña incorrectos.'; 
+  }
+});
+
+    </script>
+  </body>
+</html>
+<main>
+     
+
+
+  <section class="curso">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlL8BacNhjvEc2-0FrAZDSHi8gwRAkZvyMwg&usqp=CAU" id="curso1">
+    <h2>Curso html</h2>
+    <p>Bases del html,aprende con maestros el cuerpo de una pagina.</p>
+   <div id="pago"> <a href="#formulario"><button id="mostrar-formulario"  onclick="mostrar()">Comprar curso</button></a> <a href=""><button id="masinformacion" >Mas informacion</button>
+   </div></a>
+
+  </section>
+  <section class="curso">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYfnEd5qvO1gxd1HZhjxFdpVrYUNhiMv3Ltg&usqp=CAU" alt="Curso 2">
+    <h2>Curso css</h2>
+    <p>aprende a como diseñar una pagina con este lenguaje.</p>
+    <div id="pago"><a href="#formulario">        <button id="mostrar-formulario" onclick="mostrar()">Comprar curso</button>
+    </a> <a href=""><button id="masinformacion" >Mas informacion</button>
+    </div></a>
+  </section>
+  <section class="curso">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoyXjgVe4zbnIyQOKZYxZTxKvMB0hgjoHeMA&usqp=CAU" alt="Curso 3">
+    <h2>Curso java script </h2>
+    <p>en javascript aprenderas a como seguir un algoritmo.</p>
+    <div id="pago"><a href="#formulario">        <button id="mostrar-formulario" onclick="mostrar()">Comprar curso</button></a>
+      <a href=""><button id="masinformacion" >Mas informacion</button>
+      </div></a></div>
+  </section>
+</main>
